@@ -1,0 +1,62 @@
+#include "globals.hlsli"
+
+struct VSIn
+{
+    float4 Position : POSITION;
+    float2 UV : TEXCOORD;
+    float3 Tangent : TANGENT;
+    float3 Normal : NORMAL;
+    float3 BiNormal : BINORMAL;
+    
+    float4 Weights : BLENDWEIGHT;
+    float4 Indices : BLENDINDICES;
+};
+
+struct VSOut
+{
+    float4 Position : SV_Position;
+    float2 UV : TEXCOORD;
+    
+    float3 ViewPos : POSITION;
+    
+    float3 ViewNormal : NORMAL;
+    float3 ViewTanget : TANGENT;
+    float3 ViewBiNormal : BINORMAL;
+};
+
+
+VSOut main(VSIn In)
+{
+    VSOut OUT = (VSOut) 0.0f;
+
+    if (usedAnimation == 1)
+    {
+        Skinning(In.Position.xyz, In.Tangent, In.BiNormal, In.Normal, In.Weights, In.Indices, 0);
+    }
+
+    // Scale the object by a factor of 0.2
+    float4 scaledPosition = float4(In.Position.xyz * 0.2f, 1.0f);
+
+    float4 worldPosition = mul(scaledPosition, world);
+    float4 viewPosition = mul(worldPosition, view);
+    float4 ProjPosition = mul(viewPosition, projection);
+
+    OUT.Position = ProjPosition;
+    OUT.UV = In.UV;
+
+    float3 vViewNormal = normalize(mul(float4(In.Normal.xyz, 0.0f), world).xyz);
+    vViewNormal = normalize(mul(float4(vViewNormal, 0.0f), view).xyz);
+
+    float3 vViewTangent = normalize(mul(float4(In.Tangent.xyz, 0.0f), world).xyz);
+    vViewTangent = normalize(mul(float4(vViewTangent, 0.0f), view).xyz);
+
+    float3 vViewBiNormal = normalize(mul(float4(In.BiNormal.xyz, 0.0f), world).xyz);
+    vViewBiNormal = normalize(mul(float4(vViewBiNormal, 0.0f), view).xyz);
+
+    OUT.ViewPos = viewPosition.xyz;
+    OUT.ViewNormal = vViewNormal.xyz;
+    OUT.ViewTanget = vViewTangent.xyz;
+    OUT.ViewBiNormal = vViewBiNormal.xyz;
+
+    return OUT;
+}

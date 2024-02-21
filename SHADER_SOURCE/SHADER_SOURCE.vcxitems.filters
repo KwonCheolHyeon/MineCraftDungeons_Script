@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)BasicPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)BasicVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)BillBoardPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)BillBoardVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)BoneAnimationCS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)ButtonPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)DebugPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)DebugVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)DefferdVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)DefferdPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)DepthMapPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)DepthMapVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)OutLinePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)GridPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)GridVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)OutLineVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)ProgressBarPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)LightDirPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)LightDirVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)LightPointPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)LightPointVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)MergePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)MergeVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)PaintCS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)ParticleCS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)ParticleGS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)ParticlePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)ParticleVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)PostProcessPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)PostProcessVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)SkyBoxPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)SkyBoxVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)SpritePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)SpriteVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)TrianglePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)TriangleVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)UserInterfacePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)UserInterfaceVS.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Blur.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)BoneAnimation.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)ConstantBuffer.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)globals.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Light.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Particle.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Sampler.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Resource.hlsli" />
+  </ItemGroup>
+</Project>
